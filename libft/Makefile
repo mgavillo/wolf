@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mgavillo <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: mgavillo <mgavillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/25 17:09:00 by mgavillo          #+#    #+#              #
-#    Updated: 2019/07/01 23:34:36 by mgavillo         ###   ########.fr        #
+#    Updated: 2021/07/27 20:15:23 by mgavillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,9 +32,9 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c \
 
 OBJECTS = $(subst .c,.o,$(SRC)) 
 
-HEADERS =-I libft.h
+HEADERS = libft.h
 
-FLAGS = -Werror -Wextra -Wall
+FLAGS = #-Werror -Wextra -Wall
 
 all : $(NAME)
 

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mgavillo <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: mgavillo <mgavillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/25 17:07:49 by mgavillo          #+#    #+#              #
-#    Updated: 2019/07/20 12:54:10 by mgavillo         ###   ########.fr        #
+#    Updated: 2021/07/27 20:21:17 by mgavillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ CC = gcc
 CFLAGS =-Wall -Wextra -Werror -g
 
 SDLLIB =-L lib
-SDL =-l SDL2-2.0.0
+SDL =-lSDL2 -lSDL2main -lglut -lGL -lGLU -lGLEW -lm
 
 LIBFT =./libft
 FT_LIB =./libft/libft.a
@@ -53,13 +53,13 @@ all : $(FT_LIB) $(NAME)
 
 $(OBJDIR)%.o : $(SRCDIR)%.c $(HEADER)
 	mkdir -p $(OBJDIR)
-	$(CC) $(CFLAGS) $(MLX) -o $@ -c $<
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 $(FT_LIB):
 	make -j4 -C $(LIBFT)
 
 $(NAME): $(OBJ) $(LIBFT)
-	$(CC) $(OBJ) $(HEADERS) $(SDL) -o $(NAME) $(FT_LIB) $(SDLLIB)
+	$(CC) $(OBJ) $(HEADERS) $(SDL) -o $(NAME) $(FT_LIB)
 
 clean:
 	rm -f $(OBJ)

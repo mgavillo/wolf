@@ -3,22 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   wolf.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgavillo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mgavillo <mgavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 21:12:14 by mgavillo          #+#    #+#             */
-/*   Updated: 2019/05/15 23:39:29 by mgavillo         ###   ########.fr       */
+/*   Updated: 2021/07/27 20:17:29 by mgavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WOLF_H
 # define WOLF_H
-# include "mlx.h"
+# include "SDL2/SDL.h"
 # include "math.h"
 # include <unistd.h>
 # include "stdlib.h"
 # include "fcntl.h"
 # include "stdio.h"
-# include "SDL2/SDL.h"
 # include <pthread.h>
 # include "../libft/libft.h"
 # define WIN_WIDTH 640
