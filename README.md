@@ -1,5 +1,6 @@
 # wolf
-Wolf is a 42 project
+Wolf is a 42 project.
+
 run it with `make` and `./wolf3d ./map/map1`. You can do your own map as well.
 
  _|^|
